@@ -1,8 +1,4 @@
-# Subway Gate Simulator
-# classes: Sensor, Passenger, Card, Gate, Motor, Controller (+ GUI)
-# standard library only (tkinter)
-# run:  python metro_gate_simulator.py
-#       python metro_gate_simulator.py --terminal
+
 
 import argparse
 import random
