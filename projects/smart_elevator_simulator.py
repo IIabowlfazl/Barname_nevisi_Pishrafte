@@ -219,7 +219,7 @@ class Controller:
         if not all_calls:
             return None
 
-        # --- IDLE: pick the nearest request -------------------------------
+        
         if el.direction == Direction.IDLE:
             nearest = min(all_calls, key=lambda f: (abs(f - cur), f))
             if nearest > cur:
@@ -227,7 +227,7 @@ class Controller:
             elif nearest < cur:
                 el.direction = Direction.DOWN
             else:
-                # request is on the current floor; direction set at service time
+                
                 if bf.floors[cur].waiting_up:
                     el.direction = Direction.UP
                 elif bf.floors[cur].waiting_down:
@@ -236,7 +236,7 @@ class Controller:
                     el.direction = Direction.UP
             return nearest
 
-        # --- Moving UP ----------------------------------------------------
+       
         if el.direction == Direction.UP:
             stops = [f for f in (car | up) if f > cur]
             if stops:
@@ -249,7 +249,7 @@ class Controller:
             below = [f for f in (car | down) if f < cur]
             return max(below) if below else None
 
-        # --- Moving DOWN --------------------------------------------------
+       
         if el.direction == Direction.DOWN:
             stops = [f for f in (car | down) if f < cur]
             if stops:
