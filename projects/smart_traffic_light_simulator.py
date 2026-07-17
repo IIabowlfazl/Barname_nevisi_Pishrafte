@@ -1,7 +1,3 @@
-# Smart Traffic Light Simulator - 4 way intersection
-# classes: Car, TrafficLight, Lane, Intersection, Controller (+ GUI)
-# standard library only (tkinter, random, time, argparse)
-# run:  python smart_traffic_light_simulator.py
 
 import argparse
 import random
