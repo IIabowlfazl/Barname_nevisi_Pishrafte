@@ -10,8 +10,7 @@ from tkinter import ttk
 
 
 class TransferFunction:
-    # builds a standard 2nd order tf:  K*w^2 / (s^2 + 2*z*w*s + w^2)
-    # when zeta=1 it is still the same form (critically damped)
+
     def __init__(self, k=1.0, zeta=0.5, wn=1.0):
         self.k = k
         self.zeta = zeta
