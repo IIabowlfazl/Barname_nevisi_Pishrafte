@@ -1,8 +1,3 @@
-# Smart Elevator Simulator - 20 story building
-# classes: Person, Floor, Elevator, Controller, Building, GUI
-# uses only standard library (tkinter, random, time, argparse)
-# run:  python smart_elevator_simulator.py
-#       python smart_elevator_simulator.py --terminal
 
 import argparse
 import os
