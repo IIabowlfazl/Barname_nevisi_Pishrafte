@@ -1,7 +1,3 @@
-# First / Second Order System Step Response Analyzer
-# classes: TransferFunction, StepResponse, Plotter, Analyzer
-# uses numpy, scipy.signal, matplotlib, tkinter
-# run:  python step_response_analyzer.py
 
 import numpy as np
 import matplotlib
