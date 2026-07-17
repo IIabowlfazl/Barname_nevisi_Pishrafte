@@ -1,7 +1,3 @@
-# Water Tank Level Control Simulator
-# classes: Tank, Pump, Sensor, Controller, Simulation
-# uses numpy + matplotlib, and tkinter for the window
-# run:  python water_tank_simulator.py
 
 import numpy as np
 import matplotlib
@@ -132,9 +128,6 @@ class Simulation:
         return self.time, self.level
 
 
-# --------------------------------------------------------------------------
-# GUI
-# --------------------------------------------------------------------------
 class GUI:
     def __init__(self):
         self.root = tk.Tk()
