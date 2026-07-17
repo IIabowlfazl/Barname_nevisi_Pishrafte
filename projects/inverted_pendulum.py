@@ -1,8 +1,3 @@
-# Inverted Pendulum Balancing Game / Simulation
-# classes: Pendulum, Cart, Controller, Simulation, GUI
-# physics done by hand (cart-pole equations, simple Euler step)
-# uses pygame for the window; numpy only for noise
-# run:  python inverted_pendulum.py
 
 import math
 import random
@@ -11,14 +6,14 @@ import sys
 import pygame
 import numpy as np
 
-# physical constants
+
 G = 9.81
-MC = 1.0        # cart mass
-MP = 0.2        # pendulum mass
-L = 1.0         # pole half-length
-DT = 0.02       # time step (s)
-FORCE = 30.0    # push force from user / controller
-NOISE = 0.02    # sensor angle noise (radians)
+MC = 1.0       
+MP = 0.2        
+L = 1.0        
+DT = 0.02       
+FORCE = 30.0    
+NOISE = 0.02    
 
 WIN_W = 800
 WIN_H = 480
@@ -28,10 +23,10 @@ FPS = 50
 
 
 class Pendulum:
-    # the pole, angle theta measured from straight up
+   
     def __init__(self):
-        self.theta = 0.15      # small initial tilt
-        self.omega = 0.0       # angular velocity
+        self.theta = 0.15      
+        self.omega = 0.0       
 
     def step(self, theta_ddot, dt=DT):
         self.omega += theta_ddot * dt
@@ -43,7 +38,7 @@ class Pendulum:
 
 
 class Cart:
-    # the cart on the track, position x and velocity
+    
     def __init__(self):
         self.x = 0.0
         self.v = 0.0
@@ -58,8 +53,7 @@ class Cart:
 
 
 class Controller:
-    # automated balancer: LQR-style gain on [x, v, theta, omega]
-    # gains found by solving the continuous Riccati equation for this plant
+    
     def __init__(self):
         self.kx = 3.16
         self.kv = 6.69
