@@ -4,9 +4,9 @@ import random
 import sys
 import time
 
-# directions of the 4 approaches
+
 DIRS = ["N", "S", "E", "W"]
-# which group a direction belongs to (2 phase signalling)
+
 GROUP = {"N": "NS", "S": "NS", "E": "EW", "W": "EW"}
 
 # timing settings (in ticks)
@@ -198,9 +198,7 @@ class Intersection:
         self.log("reset")
 
 
-# --------------------------------------------------------------------------
-# GUI (tkinter)
-# --------------------------------------------------------------------------
+
 class GUI:
     def __init__(self, inter, speed_ms=400):
         import tkinter as tk
@@ -483,9 +481,7 @@ class GUI:
                               fill="#cfe0ff", font=("Consolas", 9), anchor=tk.W)
 
 
-# --------------------------------------------------------------------------
-# terminal mode
-# --------------------------------------------------------------------------
+
 def ascii_frame(it):
     lines = []
     lines.append("=" * 48)
@@ -525,9 +521,7 @@ def os_clear():
         print("\n" * 30)
 
 
-# --------------------------------------------------------------------------
-# main
-# --------------------------------------------------------------------------
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Smart Traffic Light Simulator")
     ap.add_argument("--terminal", action="store_true")
